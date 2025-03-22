@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
+  "packages": [
+    "uv@latest",
+    "gcc@latest",
+    "ripgrep@latest",
+    "glow@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "clear && PAGER=cat glow README.md"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ],
+      "readme": "clear && PAGER=cat glow README.md"
+    }
+  }
+}
