@@ -4,7 +4,11 @@
     "uv@latest",
     "gcc@latest",
     "ripgrep@latest",
-    "glow@latest"
+    "glow@latest",
+    "cmake@latest",
+    "ruff@latest",
+    "ninja@latest",
+    "conan@latest"
   ],
   "shell": {
     "init_hook": [
