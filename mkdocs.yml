@@ -1,1 +1,32 @@
 site_name: My Docs
+
+plugins:
+  - mkdocstrings
+  - mkdoxy
+  # https://github.com/best-of-lists/best-of
+  # https://github.com/mkdocs/catalog
+  # - search
+  # - mkdocs-material
+  # - mkdocs-awesome-pages-plugin
+  # - mkdocs-git-revision-date-localized-plugin
+  # - mkdocs-minify-plugin
+  # - mkdocs-redirects
+  # - mkdocs-mermaid2-plugin
+  # - mkdocs-plantuml
+  # - mkdocs-markdownextradata-plugin
+  # - mkdocs-section-index
+  # - mkdocs-macros-plugin
+  # - mkdocs-include-markdown-plugin
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: pink
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # logo:
+    # icon: home
+    # href: index.md
+  # favicon: images/favicon.ico
