@@ -12,13 +12,25 @@
   ],
   "shell": {
     "init_hook": [
-      "clear && PAGER=cat glow README.md"
+      "clear && PAGER=cat glow README.md",
+      "conan remote update conancenter --url https://center2.conan.io"
     ],
     "scripts": {
-      "test": [
-        "echo \"Error: no test specified\" && exit 1"
-      ],
-      "readme": "clear && PAGER=cat glow README.md"
+      "echo_once": "echo \"World\"",
+      "echo_twice": [
+        "echo \"World\"",
+        "echo \"Again\""
+       ],
+      "readme": "clear && PAGER=cat glow README.md",
+      "conan_build": "conan install . -pr=./conan_profiles/gcc_release --build=missing -s build_type=Release",
+      "cmake_configure": "cmake --preset=conan-release",
+      "cmake_build_release": "cmake --build --preset=conan-release",
+      "cmake_build_debug": "cmake --build --preset=conan-debug",
+      "build": [
+        "conan install . -pr=./conan_profiles/gcc_release --build=missing -s build_type=Release",
+        "cmake --preset=conan-release",
+        "cmake --build --preset=conan-release"
+      ]
     }
   }
 }

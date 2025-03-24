@@ -2,7 +2,7 @@
 
 int main()
 {
-    std::print("Hello, World!");
+    spdlog::info("Hello, World!");
 
     return 0;
 }

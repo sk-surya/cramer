@@ -1,0 +1,14 @@
+[requires]
+spdlog/1.15.1
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[options]
+spdlog/*:shared=True
+spdlog/*:header_only=False
+spdlog/*:use_std_fmt=True
+
+[layout]
+cmake_layout
