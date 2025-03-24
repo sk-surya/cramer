@@ -32,7 +32,8 @@
         "conan install . --profile:build=./conan_profiles/gcc_release --profile:host=./conan_profiles/gcc_release --build=missing -s build_type=Release",
         "cmake --preset=conan-release",
         "cmake --build --preset=conan-release"
-      ]
+      ],
+      "tidy": "clang-tidy -p build/Release src/cpp/include/optimodel.h"
     }
   }
 }
