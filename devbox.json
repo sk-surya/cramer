@@ -8,7 +8,9 @@
     "cmake@latest",
     "ruff@latest",
     "ninja@latest",
-    "conan@latest"
+    "conan@latest",
+    "clang@latest",
+    "clang-tools@latest"
   ],
   "shell": {
     "init_hook": [
@@ -20,12 +22,12 @@
       "echo_twice": [
         "echo \"World\"",
         "echo \"Again\""
-       ],
-      "readme": "clear && PAGER=cat glow README.md",
-      "conan_build": "conan install . --profile:build=./conan_profiles/gcc_release --profile:host=./conan_profiles/gcc_release --build=missing -s build_type=Release",
-      "cmake_configure": "cmake --preset=conan-release",
+      ],
+      "readme":              "clear && PAGER=cat glow README.md",
+      "conan_build":         "conan install . --profile:build=./conan_profiles/gcc_release --profile:host=./conan_profiles/gcc_release --build=missing -s build_type=Release",
+      "cmake_configure":     "cmake --preset=conan-release",
       "cmake_build_release": "cmake --build --preset=conan-release",
-      "cmake_build_debug": "cmake --build --preset=conan-debug",
+      "cmake_build_debug":   "cmake --build --preset=conan-debug",
       "build": [
         "conan install . --profile:build=./conan_profiles/gcc_release --profile:host=./conan_profiles/gcc_release --build=missing -s build_type=Release",
         "cmake --preset=conan-release",
