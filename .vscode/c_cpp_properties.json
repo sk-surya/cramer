@@ -1,0 +1,60 @@
+{
+    "env": {
+        "myIncludePath": [
+            // "${workspaceFolder}/src/cpp/include"
+            "${HOME}/.conan2/**"
+        ],
+        "myDefines": []
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "compilerPath": "${workspaceFolder}/.devbox/nix/profile/default/bin/gcc",
+            "compilerArgs": [
+                "-m64",
+                "-std=c++23"
+            ],
+            "intelliSenseMode": "linux-gcc-x64",
+            "includePath": [
+                "${myIncludePath}"
+                // gcc -v -E -x c++ -
+                // "/nix/store/wz0j2zi02rvnjiz37nn28h3gfdq61svz-python3-3.12.9/include",
+                // "/nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include/c++/14-20241116/",
+                // "/nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include/c++/14-20241116//x86_64-unknown-linux-gnu",
+                // "/nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include/c++/14-20241116//backward",
+                // "/nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/include",
+                // "/nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include",
+                // "/nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/include-fixed",
+                // "/nix/store/5djq7mrpqv8kzn2xi22y5d8ww7rsix82-glibc-2.40-66-dev/include"
+            ],
+            "defines": [
+                "${myDefines}"
+            ],
+            "cStandard": "gnu23",
+            "cppStandard": "c++23",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "forcedInclude": [
+                // "${workspaceFolder}/common.h"
+            ],
+            "compileCommands": [
+                "${workspaceFolder}/build/Release/compile_commands.json"
+            ],
+            // "dotConfig": "${workspaceFolder}/.config",
+            "mergeConfigurations": true,
+            "customConfigurationVariables": {
+                "myVar": "myvalue"
+            },
+            "browse": {
+                "path": [
+                    "${myIncludePath}",
+                    "/usr/include",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+}
